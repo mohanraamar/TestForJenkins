@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/MyEditorScript.cs">
     <Files>
+      <File FileName="../../Downloads/MyEditorScript (1).cs" Line="1" Column="1" />
       <File FileName="Assets/Editor/MyEditorScript.cs" Line="14" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
