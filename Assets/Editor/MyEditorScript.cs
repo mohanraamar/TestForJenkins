@@ -21,14 +21,14 @@ public class MyEditorScript {
 	[MenuItem ("Custom/CI/Build IPhone")]
 	static void PerformIPhoneBuild ()
 	{
-		string target_dir = APP_NAME + "";
+		string target_dir = "BuildIPhone" + "";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.iPhone,BuildOptions.None) ;
 	}
 
 	[MenuItem ("Custom/CI/Build Android")]
 	static void PerformAndroidBuild ()
 	{
-		string target_dir = APP_NAME + "";
+		string target_dir = "BuildAndroid" + "";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.Android,BuildOptions.None);
 	}
 	
