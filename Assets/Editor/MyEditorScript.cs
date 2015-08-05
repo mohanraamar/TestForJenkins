@@ -9,7 +9,7 @@ public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
 	static string APP_NAME = "YourProject1";
-	static string TARGET_DIR = "target1"; //PlayerSettings.
+	static string TARGET_DIR = "/Downloads/"; //"target"; //PlayerSettings.
 	
 	[MenuItem ("Custom/CI/Build Mac OS X")]
 	static void PerformMacOSXBuild ()
@@ -46,6 +46,6 @@ public class MyEditorScript {
 	[MenuItem ("Example/Get Unique Path")]
 	static void GetUniqueProjectPath () {
 		// Prints the unique path
-		Debug.Log (syst);//Application.dataPath);
+		//Debug.Log (syst);//Application.dataPath);
 	}
 }
