@@ -3,6 +3,7 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.IO;
 using FileInfos = System.Collections.Generic.List<System.IO.FileInfo>;
 
 public class MyEditorScript {
@@ -21,15 +22,25 @@ public class MyEditorScript {
 	[MenuItem ("Custom/CI/Build IPhone")]
 	static void PerformIPhoneBuild ()
 	{
-		string target_dir = "BuildIPhone1" + "";
-		GenericBuild(SCENES, TARGET_DIR + "/Android/" + target_dir, BuildTarget.iPhone ,BuildOptions.None) ;
+		string Path = TARGET_DIR + "/IPhone/";
+		if (!Directory.Exists (TARGET_DIR + "/IPhone")) {
+			System.IO.Directory.CreateDirectory (TARGET_DIR + "/IPhone");
+		}
+
+		string target_dir = "BuildIPhone" + "";
+		GenericBuild(SCENES, Path + target_dir, BuildTarget.iPhone ,BuildOptions.None) ;
 	}
 
 	[MenuItem ("Custom/CI/Build Android")]
 	static void PerformAndroidBuild ()
 	{
+		string Path = TARGET_DIR + "/Android/";
+		if (!Directory.Exists (TARGET_DIR + "/Android")) {
+			System.IO.Directory.CreateDirectory (TARGET_DIR + "/Android");
+		}
+
 		string target_dir = "BuildAndroid" + "";
-		GenericBuild(SCENES, TARGET_DIR + "/Android/" + target_dir, BuildTarget.Android,BuildOptions.None);
+		GenericBuild(SCENES, Path + target_dir, BuildTarget.Android,BuildOptions.None);
 	}
 	
 	private static string[] FindEnabledEditorScenes() {
