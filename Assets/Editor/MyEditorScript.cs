@@ -9,7 +9,7 @@ public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
 	static string APP_NAME = "YourProject1";
-	static string TARGET_DIR = "/Downloads/"; //"target"; //PlayerSettings.
+	static string TARGET_DIR = "target"; //PlayerSettings.
 	
 	[MenuItem ("Custom/CI/Build Mac OS X")]
 	static void PerformMacOSXBuild ()
