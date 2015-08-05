@@ -3,12 +3,13 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using FileInfos = System.Collections.Generic.List<System.IO.FileInfo>;
 
 public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
 	static string APP_NAME = "YourProject1";
-	static string TARGET_DIR = "/Downloads/"; //"target"; //PlayerSettings.
+	static string TARGET_DIR = "target1"; //PlayerSettings.
 	
 	[MenuItem ("Custom/CI/Build Mac OS X")]
 	static void PerformMacOSXBuild ()
@@ -45,6 +46,6 @@ public class MyEditorScript {
 	[MenuItem ("Example/Get Unique Path")]
 	static void GetUniqueProjectPath () {
 		// Prints the unique path
-		Debug.Log (Application.dataPath);
+		Debug.Log (syst);//Application.dataPath);
 	}
 }
