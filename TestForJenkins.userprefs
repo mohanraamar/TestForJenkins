@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/MyEditorScript.cs">
     <Files>
-      <File FileName="../../Downloads/MyEditorScript (1).cs" Line="1" Column="1" />
-      <File FileName="Assets/Editor/MyEditorScript.cs" Line="14" Column="35" />
+      <File FileName="../PickItWorking/Pickit/Assets/IPro/Scripts/Settings/Credits.cs" Line="52" Column="38" />
+      <File FileName="../PickItWorking/Pickit/Assets/IPro/Scripts/Settings/WebMediator.cs" Line="1" Column="1" />
+      <File FileName="../PickItWorking/Pickit/Assets/IPro/Scripts/Config/Constants.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/MyEditorScript.cs" Line="48" Column="34" />
+      <File FileName="../PickItWorking/Pickit/Assets/Editor/PostProcess.cs" Line="24" Column="88" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

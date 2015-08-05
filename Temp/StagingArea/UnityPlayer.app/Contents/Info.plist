@@ -5,17 +5,17 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>YourProject1</string>
+	<string>UnityPlayer</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Unity Player version 4.6.4p1 (cced61583dd2). (c) 2014 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>unity.DefaultCompany.TestForJenkins</string>
+	<string>UNITY_BUNDLE_IDENTIFIER</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>YourProject1</string>
+	<string>UnityPlayer</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
