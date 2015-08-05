@@ -22,7 +22,7 @@ public class MyEditorScript {
 	static void PerformIPhoneBuild ()
 	{
 		string target_dir = APP_NAME + "";
-		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget,iPhone,BuildOptions.None) ;
+		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.iPhone,BuildOptions.None) ;
 	}
 
 	[MenuItem ("Custom/CI/Build Android")]
