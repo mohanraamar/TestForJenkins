@@ -9,7 +9,7 @@ public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
 	static string APP_NAME = "Android";
-	static string TARGET_DIR = "target/Android"; //PlayerSettings.
+	static string TARGET_DIR = "target"; //PlayerSettings.
 	
 	[MenuItem ("Custom/CI/Build Mac OS X")]
 	static void PerformMacOSXBuild ()
@@ -22,14 +22,14 @@ public class MyEditorScript {
 	static void PerformIPhoneBuild ()
 	{
 		string target_dir = "BuildIPhone" + "";
-		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.iPhone,BuildOptions.None) ;
+		GenericBuild(SCENES, TARGET_DIR + "/IPhone/" + target_dir, BuildTarget.iPhone ,BuildOptions.None) ;
 	}
 
 	[MenuItem ("Custom/CI/Build Android")]
 	static void PerformAndroidBuild ()
 	{
 		string target_dir = "BuildAndroid" + "";
-		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.Android,BuildOptions.None);
+		GenericBuild(SCENES, TARGET_DIR + "/Android/" + target_dir, BuildTarget.Android,BuildOptions.None);
 	}
 	
 	private static string[] FindEnabledEditorScenes() {
