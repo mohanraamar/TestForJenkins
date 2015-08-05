@@ -21,8 +21,8 @@ public class MyEditorScript {
 	[MenuItem ("Custom/CI/Build IPhone")]
 	static void PerformIPhoneBuild ()
 	{
-		string target_dir = "BuildIPhone" + "";
-		GenericBuild(SCENES, TARGET_DIR + "/IPhone/" + target_dir, BuildTarget.iPhone ,BuildOptions.None) ;
+		string target_dir = "BuildIPhone1" + "";
+		GenericBuild(SCENES, TARGET_DIR + "/Android/" + target_dir, BuildTarget.iPhone ,BuildOptions.None) ;
 	}
 
 	[MenuItem ("Custom/CI/Build Android")]
