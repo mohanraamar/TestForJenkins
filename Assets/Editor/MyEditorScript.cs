@@ -8,7 +8,7 @@ using FileInfos = System.Collections.Generic.List<System.IO.FileInfo>;
 public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
-	static string APP_NAME = "YourProject1";
+	static string APP_NAME = "YourProject";
 	static string TARGET_DIR = "target"; //PlayerSettings.
 	
 	[MenuItem ("Custom/CI/Build Mac OS X")]
@@ -21,7 +21,7 @@ public class MyEditorScript {
 	[MenuItem ("Custom/CI/Build Android")]
 	static void PerformAndroidBuild ()
 	{
-		string target_dir = APP_NAME + "";
+		string target_dir = APP_NAME + ".apk";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.Android,BuildOptions.None);
 	}
 	
