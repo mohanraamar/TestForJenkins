@@ -18,6 +18,13 @@ public class MyEditorScript {
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.StandaloneOSXUniversal,BuildOptions.None) ;
 	}
 
+	[MenuItem ("Custom/CI/Build IPhone")]
+	static void PerformIPhoneBuild ()
+	{
+		string target_dir = APP_NAME + "";
+		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget,iPhone,BuildOptions.None) ;
+	}
+
 	[MenuItem ("Custom/CI/Build Android")]
 	static void PerformAndroidBuild ()
 	{
