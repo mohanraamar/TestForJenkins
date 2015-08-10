@@ -6,6 +6,12 @@ using System;
 using System.IO;
 using FileInfos = System.Collections.Generic.List<System.IO.FileInfo>;
 
+#if UNITY_IOS
+using UnityEditor.iOS.Xcode;
+#endif
+using UnityEditor.Callbacks;
+using System.Linq;
+
 public class MyEditorScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 	
@@ -66,4 +72,38 @@ public class MyEditorScript {
 		// Prints the unique path
 		//Debug.Log (syst);//Application.dataPath);
 	}
+
+	[PostProcessBuild(200)]
+	public static void ChangeXcodePlist(BuildTarget buildTarget, string pathToBuiltProject)
+	{
+		#if UNITY_IOS
+		string temp = pathToBuiltProject + "/Unity-iPhone.xcodeproj/project.pbxproj";
+		PBXProject proj = new PBXProject();
+		proj.ReadFromString(File.ReadAllText(temp));
+		
+		string target = proj.TargetGuidByName(PBXProject.GetUnityTargetName());
+		proj.AddBuildProperty(target, "OTHER_LDFLAGS", "-ObjC");
+		proj.AddBuildProperty(target, "OTHER_LDFLAGS", "-lc++");
+		proj.AddBuildProperty(target, "CODE_SIGN_RESOURCE_RULES_PATH", "$(SDKROOT)/ResourceRules.plist");
+		proj.AddBuildProperty(target, "CLANG_ENABLE_MODULES","YES");
+
+		File.WriteAllText(temp, proj.WriteToString());
+		#endif
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
